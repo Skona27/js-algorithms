@@ -9,23 +9,29 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-    let charMapA = charMap(normalize(stringA));
-    let charMapB = charMap(normalize(stringB));
+//     let charMapA = charMap(normalize(stringA));
+//     let charMapB = charMap(normalize(stringB));
     
-    // first compare number of keys
-    if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
-        return false;
-    }
+//     // first compare number of keys
+//     if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
+//         return false;
+//     }
     
-    // compare if char count is the same
-    for (let char in charMapA) {
-        if (charMapA[char] !== charMapB[char]) {
-            return false;
-        }
-    }
+//     // compare if char count is the same
+//     for (let char in charMapA) {
+//         if (charMapA[char] !== charMapB[char]) {
+//             return false;
+//         }
+//     }
     
-    return true;
-}
+//     return true;
+
+    // ALTERNATIVE SOLUTION - SORTING STRING
+    let strA = normalize(stringA).split("").sort().join("");
+    let strB = normalize(stringB).split("").sort().join("");
+    
+    return strA === strB;
+ }
 
 
 // replace every non char character, and lowercase
