@@ -7,6 +7,9 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+function vowels(str) {
+  let tempStr = str.toLowerCase();
+  return tempStr.replace(/[^aeiou]/g, "").length;
+}
 
 module.exports = vowels;
