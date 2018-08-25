@@ -16,6 +16,11 @@ class Queue {
   remove() {
     return this.data.pop();
   }
+
+  peek() {
+    let lastInd = this.data.length - 1;
+    return (lastInd !== -1) ?  this.data[lastInd] : null;
+  }
 }
 
 module.exports = Queue;
