@@ -1,2 +1,2 @@
-# algorytmy
-Testing algorithms
+# js-algorithms
+Collection of the most common algorithms written in JS
